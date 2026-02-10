@@ -19,6 +19,12 @@
 }
 
 .timeline-item {
-  flex: 0 0 auto; /* prevent items from squishing to fill screen */
+  flex: 0 0 350px; /* prevent items from squishing to fill screen */
   width: 250px;
+}
+
+.timeline-item > img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
 }
