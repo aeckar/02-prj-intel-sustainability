@@ -28,7 +28,7 @@
 
 .timeline-item > img {
   width: 100%;
-  height: 60%;
+  height: 81%;
   border-radius: 15px; /* rounded corners */
   margin-top: 15px;
   object-fit: cover; /* don't stretch image if aspect ratios vary */
@@ -51,7 +51,7 @@
 .timeline-item:hover {
   transform: translateY(-10px); /* lift item up slightly */
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* darker shadow */
-  border-color: #4caf50; /* go green! */
+  border-color: #111;
   cursor: pointer;
 }
 
@@ -84,4 +84,30 @@ header {
     width: 80%;
     max-width: 400px;
   }
+}
+
+.timeline-item p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 104, 181, 0.9); /* Intel Blue with transparency */
+  color: white;
+  padding: 20px;
+  box-sizing: border-box; /* ensure padding doesn't break width */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  opacity: 0;
+  z-index: 2; /* place above image */
+}
+
+.timeline-item:hover p {
+  opacity: 1; /* make visible on hover */
+  transform: translateY(0);
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
 }
