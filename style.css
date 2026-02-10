@@ -21,10 +21,32 @@
 .timeline-item {
   flex: 0 0 350px; /* prevent items from squishing to fill screen */
   width: 250px;
+  padding: 0;
 }
 
 .timeline-item > img {
   width: 100%;
-  border-radius: 10px;
-  margin-top: 10px;
+  height: 60%;
+  border-radius: 15px; /* rounded corners */
+  margin-top: 15px;
+  object-fit: cover;  /* don't stretch image if aspect ratios vary */
+}
+
+/* #0068B5 = Intel Blue! */
+
+.timeline-item {
+    flex: 0 0 350px;
+    width: 250px;
+    padding: 20px;
+    border: 2px solid #0068B5;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* basic shadow */
+}
+
+.timeline-item:hover {
+    transform: translateY(-10px); /* lift item up slightly */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* darker shadow */
+    border-color: #4CAF50; /* go green! */
+    cursor: pointer;
 }
